@@ -1,17 +1,14 @@
 package com.example.svetofor
 
 import android.graphics.Color
-import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 
 class MainActivity : AppCompatActivity() {
 
-    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         redButton.setOnClickListener {
             textView.text = "Красный"
-            root_layout.setBackgroundColor(resources.getColor(R.color.redColor, null))
+            root_layout.setBackgroundColor(Color.RED)
         }
 
         yellowButton.setOnClickListener {
